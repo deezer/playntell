@@ -63,3 +63,16 @@ This repo uses code from the following repo, with minor modifications:
 * [ply_title_get](https://github.com/SeungHeonDoh/ply_title_gen) (ply_title_gen folder)
 * [VisualGPT](https://github.com/Vision-CAIR/VisualGPT) (audio_gpt folder)
 We took the code from VisualGPT, modified the model code in it and renamed it to AudioGPT
+
+## Paper
+
+This repo contains the code of the paper:
+```
+@InProceedings{Gabbolini2022,
+  title={Bag of Tricks for Efficient Text Classification},
+  author={Gabbolini, Giovanni and Hennequin, Romain and Epure, Elena},
+  booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  month={December},
+  year={2022}
+}
+```
