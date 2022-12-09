@@ -10,7 +10,6 @@ res/p/audio_gpt/tensorboard_logs/
 .devcontainer
 *.tar
 *.tar.gz
-*.npy
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

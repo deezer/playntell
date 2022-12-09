@@ -34,17 +34,17 @@ RUN poetry run python3 -m spacy download en_core_web_sm
 RUN wget -nc -P ./playntell/audio_gpt/ https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-pytorch_model.bin
 
 
-# Download and extract curated-deezer and curated-spotify datasets, and a test playlist containing noise
-RUN mkdir tmp && mkdir -p /data/playlist-captioning/p/
-RUN wget -nc -P tmp/ https://zenodo.org/record/7418837/files/playntell_datasets.zip
-RUN unzip -q -d tmp/ tmp/playntell_datasets && cp -r tmp/playntell_datasets/* /data/playlist-captioning/p/
-
-# Download and extract an already trained model (for inference) and discog tag embeddings
-COPY playntell_model.tar tmp/
+# Download and extract the playntell datasets and the trained model
 RUN mkdir -p /data/playlist-captioning/p/curated-deezer/algorithm-data/
-RUN tar -xf tmp/playntell_model.tar -C /data/playlist-captioning/p/curated-deezer/algorithm-data/
-COPY discogs_tags_embeddings.npy /data/playlist-captioning/p/
-RUN rm -r tmp/
+RUN wget -nc https://zenodo.org/record/7419490/files/playntell_data_and_model.tar
+RUN tar -xf playntell_data_and_model.tar -C .
+
+# Extract the curated-deezer and curated-spotify datasets, and a test playlist containing noise
+RUN cp -r playntell_data_and_model/playntell_datasets/* /data/playlist-captioning/p/
+# Extract the already trained model and copy the discog tag embeddings
+RUN cp -r playntell_data_and_model/playntell /data/playlist-captioning/p/curated-deezer/algorithm-data/
+COPY data/discogs_tags_embeddings.npy /data/playlist-captioning/p/
+RUN rm -r playntell_data_and_model.tar playntell_data_and_model/
 
 COPY playntell/ playntell/
 

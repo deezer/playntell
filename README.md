@@ -2,7 +2,7 @@
 
 ## Setup
 
-Build the docker image and launch an interactive bash session in it:
+Build the docker image and run it in a container while launching an interactive bash session:
 
 ```sh
 $ make build
