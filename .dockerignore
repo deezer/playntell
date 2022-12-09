@@ -1,0 +1,11 @@
+.venv
+res
+**/*.jar
+**/*.gz
+!curated-deezer.tar.gz
+!curated-spotify.tar.gz
+!test_playlist.tar.gz
+!playntell_model.tar.gz
+muscaps/muscaps/caption_evaluation_tools/coco_caption/pycocoevalcap/spice/cache/*
+res/p/audio_gpt/saved_models/*
+res/p/audio_gpt/tensorboard_logs/*

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "playntell"
+version = "0.1.0"
+description = ""
+authors = ["Deezer Research"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.9"
+torch = "1.12.0"
+tensorflow = "2.7.2 "
+pycocotools = "^2.0.6"
+spacy = "^3.4.3"
+pandas = "1.2.0"
+bert-score = "^0.3.12"
+scipy = "^1.7.0"
+pydantic = "^1.10.2"
+audio2numpy = "^0.1.2"
+soxr = "^0.3.3"
+numpy = ">=1.14.5, <1.17"
+musicnn = "^0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
