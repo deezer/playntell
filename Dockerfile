@@ -29,10 +29,8 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry install
 
 
-# Download spacy 'en' model as well as the GPT2 model for training
+# Download spacy 'en' model
 RUN poetry run python3 -m spacy download en_core_web_sm
-RUN wget -nc -P ./playntell/audio_gpt/ https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-pytorch_model.bin
-
 
 # Download and extract the playntell datasets and the trained model
 RUN mkdir -p /data/playlist-captioning/p/curated-deezer/algorithm-data/
@@ -47,5 +45,8 @@ COPY data/discogs_tags_embeddings.npy /data/playlist-captioning/p/
 RUN rm -r playntell_data_and_model.tar playntell_data_and_model/
 
 COPY playntell/ playntell/
+
+# Download the GPT2 model
+RUN wget -nc -P ./playntell/audio_gpt/ https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-pytorch_model.bin
 
 CMD poetry run python3 playntell/training_experiments/train_playntell.py
