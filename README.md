@@ -69,7 +69,7 @@ We took the code from VisualGPT, modified the model code in it and renamed it to
 This repo contains the code of the paper:
 ```
 @InProceedings{Gabbolini2022,
-  title={Bag of Tricks for Efficient Text Classification},
+  title={Data-Efficient Playlist Captioning With Musical and Linguistic Knowledge},
   author={Gabbolini, Giovanni and Hennequin, Romain and Epure, Elena},
   booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
   month={December},
