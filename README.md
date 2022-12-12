@@ -38,7 +38,7 @@ $ poetry run python3 playntell/infer.py --exp_name playntell --inference_dataset
 
 ## Inference on new playlists:
 
-You can use the playntell model to predict a caption for a playlist with:
+You can use the playntell model to predict a caption for a playlist (audio files, tags, and artists information) with:
 ```
 $ poetry run python3 playntell/caption_playlist.py /data/playlist-captioning/p/test_playlist/playlist.json
 ```
