@@ -34,7 +34,7 @@ RUN poetry run python3 -m spacy download en_core_web_sm
 
 # Download and extract the playntell datasets and the trained model
 RUN mkdir -p /data/playlist-captioning/p/curated-deezer/algorithm-data/
-RUN wget -nc https://zenodo.org/record/7419490/files/playntell_data_and_model.tar
+RUN wget -nc https://zenodo.org/record/7427231/files/playntell_data_and_model.tar
 RUN tar -xf playntell_data_and_model.tar -C .
 
 # Extract the curated-deezer and curated-spotify datasets, and a test playlist containing noise
