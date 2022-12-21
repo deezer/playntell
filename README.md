@@ -1,5 +1,5 @@
 # PlayNTell
-The current repository provides the code for PlayNTell, described in the article [**Data-Efficient Playlist Captioning With Musical and Linguistic Knowledge**](), presented at [**EMNLP 2022**](https://2022.emnlp.org).
+The current repository provides the code for PlayNTell, described in the article **Data-Efficient Playlist Captioning With Musical and Linguistic Knowledge**, presented at [**EMNLP 2022**](https://2022.emnlp.org).
 
 ## Installation
 
