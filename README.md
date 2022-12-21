@@ -21,7 +21,7 @@ When building the docker image, the released data which is currently hosted on [
 
 ## Run algorithms
 
-In order to run the code, a ``cuda`` environment, with a version ``>=11.2`` is required. While the inference is fast, the train could last up to 2 days.
+In order to run the code, a ``cuda`` environment, with a version ``>=11.2`` is required. While the inference is quite fast, training could last up to 2 days.
 
 ### PlayNTell: training & infererence:
 
