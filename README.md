@@ -17,7 +17,8 @@ $ make build
 $ make run-bash
 ```
 
-When building the docker image, the released data which is currently hosted on [**Zenodo**](https://zenodo.org/record/7427231) is also downloaded. Thus, the build may take a while.
+When building the docker image, the released data which is currently hosted on [**Zenodo**](https://zenodo.org/record/7427231) is also downloaded in the directory `data`; thus the build may take a while. Also in `data`, we can find pre-computed embeddings for the discogs tags using music-w2v (see Doh et al., 2020 in the paper).
+
 
 ## Run algorithms
 
