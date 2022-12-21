@@ -35,7 +35,7 @@ Note: `playntell` accepts multiple parameters. Two useful ones are:
 - `--exp_name`: to distinguish the output of different runs. Default: "playntell";
 - `--playlist_feature`: music modalities to be used. Default: "audio_tags_artist". E.g. if "audio_artist", only two modalities are used as explained in the paper.
 
-Note: `playntell` save its outputs in: ``../data/playlist-captioning/p/curated-deezer/algorithm-data/playntell/``. In particular:
+Note: `playntell` saves its outputs in: ``../data/playlist-captioning/p/curated-deezer/algorithm-data/playntell/``. In particular:
 
 - model is stored as ``../data/playlist-captioning/p/curated-deezer/algorithm-data/playntell/saved_models/{exp_name}/best.pth``;
 - inference on test sets is stored in ``../data/playlist-captioning/p/curated-deezer/algorithm-data/playntell/predictions/{exp_name}``;
@@ -54,14 +54,14 @@ You can use the playntell model to predict a caption for a playlist (given by it
 ```
 $ poetry run python3 playntell/caption_playlist.py /data/playlist-captioning/p/test_playlist/playlist.json
 ```
-the playlist.json files has two fields:
-- "id" which is the id of the playlist (could be any string)
-- "tracks" is the list of tracks of the playlist. Each track must have the following fields:
-    - "id": the filename of the audio file.
-    - "artist": the name of the main artist of the song in the audio file.
-    - "tags": a list of tags (from the discogs taxonomy) describing the track.
+the `playlist.json` file has two fields:
+- `id` which is the id of the playlist (could be any string)
+- `tracks` is the list of tracks of the playlist. Each track must have the following fields:
+    - `id`: the filename of the audio file.
+    - `artist`: the name of the main artist of the song in the audio file.
+    - `tags`: a list of tags (from the discogs taxonomy) describing the track.
 
-A dummy example of a playlist.json and audio files is provided for testing in `/data/playlist-captioning/p/test_playlist/`, found in the docker container.
+A dummy example of a `playlist.json` and audio files is provided for testing in `/data/playlist-captioning/p/test_playlist/`, found in the docker container.
 
 
 
