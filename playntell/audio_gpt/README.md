@@ -1,7 +1,11 @@
 
-# VisualGPT
+# AudioGPT
 
-Our Paper [VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning](https://arxiv.org/abs/2102.10407)
+This code is mostly based on the VisualGPT original repository, presented in the paper [VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning](https://arxiv.org/abs/2102.10407).
+
+We modified multiple components, in order to adapt it to audio data and PlayNtell experimental setup. The encoder works now with audio embeddings, tags, but also the artist distribution vector. The cross-attention in the decoder was also modified to accommodate the three encoder branches (as shown in Eq 3, in our paper). When decoding, the artist masking is reversed considering the artist distribution vector.
+
+We leave below unchanged the Readme of the original VisualGPT repository used for image captioning.
 
 ## Download the GPT-2 pretrained weights
 ```
